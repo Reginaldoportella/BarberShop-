@@ -8,7 +8,7 @@ export type Service = {
 export const services: Service[] = [
   {
     name: "Corte Signature",
-    description: "Consultoria de estilo, corte preciso na tesoura e finalizacao premium.",
+    description: "Consultoria de estilo, corte preciso na tesoura e finalização premium.",
     duration: "45 min",
     price: "R$ 80",
   },
@@ -20,13 +20,13 @@ export const services: Service[] = [
   },
   {
     name: "Combo Executivo",
-    description: "Corte, barba, sobrancelha e finalizacao para uma rotina sem atrito.",
+    description: "Corte, barba, sobrancelha e finalização para uma rotina sem atrito.",
     duration: "75 min",
     price: "R$ 125",
   },
   {
     name: "Tratamento Capilar",
-    description: "Higienizacao, hidratacao e styling para manter o cabelo no ponto.",
+    description: "Higienização, hidratação e styling para manter o cabelo no ponto.",
     duration: "40 min",
     price: "R$ 70",
   },

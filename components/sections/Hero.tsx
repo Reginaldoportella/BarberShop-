@@ -48,7 +48,7 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="/images/hero-editorial.png"
+        poster="/images/hero-tools-minimal.jpg"
         aria-label="Cena de barbearia em movimento como fundo premium"
       >
         <source src="/videos/hero-motion.mp4" type="video/mp4" />
@@ -67,7 +67,7 @@ export function Hero() {
             ELEGÂNCIA
           </p>
           <p className="mx-auto mt-7 max-w-sm text-xs font-bold leading-7 tracking-[0.16em] text-white sm:max-w-none sm:text-base sm:tracking-[0.34em]">
-            Cortes clássicos, modernos com acabamento profisional e experiência
+            Cortes clássicos, modernos com acabamento profissional e experiência
             única
           </p>
           <div className="mt-10">

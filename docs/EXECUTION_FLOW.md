@@ -2,37 +2,37 @@
 
 ## Objetivo do fluxo
 
-Este documento organiza a execucao do BarberFlow por fases, mantendo clara a
-separacao entre interface visual, validacao de formulario, persistencia,
-disponibilidade real e administracao.
+Este documento organiza a execução do BarberFlow por fases, mantendo clara a
+separação entre interface visual, validação de formulário, persistência,
+disponibilidade real e administração.
 
-## Especificacoes inspiradas no prestige-salon
+## Especificações inspiradas no prestige-salon
 
-O projeto `rr3s1/prestige-salon` sera usado apenas como inspiracao conceitual
-para uma landing page moderna de salao/barbearia, com foco em servicos,
+O projeto `rr3s1/prestige-salon` será usado apenas como inspiração conceitual
+para uma landing page moderna de salão/barbearia, com foco em serviços,
 agendamento e depoimentos.
 
 Importante:
 
-- Nao copiar codigo diretamente.
-- Nao copiar textos diretamente.
-- Nao copiar identidade visual diretamente.
-- Usar apenas como referencia de produto e experiencia.
+- Não copiar código diretamente.
+- Não copiar textos diretamente.
+- Não copiar identidade visual diretamente.
+- Usar apenas como referência de produto e experiência.
 
-Como aplicar a inspiracao:
+Como aplicar a inspiração:
 
-- Observar a estrutura de experiencia: hero, servicos, equipe, galeria,
+- Observar a estrutura de experiência: hero, serviços, equipe, galeria,
   depoimentos, contato e agendamento.
-- Reinterpretar a direcao visual para o BarberFlow.
-- Manter componentes, textos, dados e identidade proprios do projeto.
-- Priorizar uma experiencia clara de conversao para agendamento.
+- Reinterpretar a direção visual para o BarberFlow.
+- Manter componentes, textos, dados e identidade próprios do projeto.
+- Priorizar uma experiência clara de conversão para agendamento.
 
 ## Fluxo por fases
 
-## Status atual de execucao
+## Status atual de execução
 
-- Fase 1 concluida: estrutura, landing page, rotas preparadas e dados mockados.
-- Fase 2 em andamento: polimento visual, video/parallax, animacoes de entrada e microinteracoes.
+- Fase 1 concluída: estrutura, landing page, rotas preparadas e dados mockados.
+- Fase 2 em andamento: polimento visual, vídeo/parallax, animações de entrada e microinterações.
 - Prisma, banco de dados, API real e disponibilidade real continuam fora do escopo atual.
 
 ### Fase 1 - Estrutura e landing page
@@ -40,7 +40,7 @@ Como aplicar a inspiracao:
 Executar:
 
 1. Criar a estrutura inicial do projeto.
-2. Criar componentes de layout e secoes.
+2. Criar componentes de layout e seções.
 3. Criar dados mockados.
 4. Montar a landing page.
 5. Criar as rotas `/agendamento` e `/admin`.
@@ -50,51 +50,51 @@ Mensagem oficial da rota de agendamento:
 
 > "Fase 1: rota preparada com dados mockados. Banco, Prisma e regras de disponibilidade entram em fases futuras."
 
-Limites obrigatorios da Fase 1:
+Limites obrigatórios da Fase 1:
 
-- Nao configurar Prisma.
-- Nao criar banco de dados.
-- Nao criar migrations.
-- Nao implementar API real.
-- Nao implementar regras reais de disponibilidade.
-- Nao persistir agendamentos.
+- Não configurar Prisma.
+- Não criar banco de dados.
+- Não criar migrations.
+- Não implementar API real.
+- Não implementar regras reais de disponibilidade.
+- Não persistir agendamentos.
 
 Resultado esperado:
 
 - Landing page funcional e responsiva.
 - Rotas preparadas visualmente.
-- Dados mockados suficientes para demonstrar a experiencia.
+- Dados mockados suficientes para demonstrar a experiência.
 
-### Fase 2 - Melhorias visuais e animacoes
+### Fase 2 - Melhorias visuais e animações
 
 Executar:
 
 1. Refinar layout, hierarquia e ritmo visual.
-2. Adicionar animacoes leves.
+2. Adicionar animações leves.
 3. Melhorar estados de hover/focus.
 4. Revisar responsividade.
-5. Otimizar imagens e video quando necessario.
+5. Otimizar imagens e vídeo quando necessário.
 
 Resultado esperado:
 
-- Experiencia visual mais polida.
-- Interacoes mais fluidas.
-- Nenhuma dependencia de banco ou Prisma.
+- Experiência visual mais polida.
+- Interações mais fluidas.
+- Nenhuma dependência de banco ou Prisma.
 
-### Fase 3 - Formulario com React Hook Form e Zod
+### Fase 3 - Formulário com React Hook Form e Zod
 
 Executar:
 
-1. Criar formulario de agendamento.
+1. Criar formulário de agendamento.
 2. Adicionar React Hook Form.
-3. Criar schema de validacao com Zod.
+3. Criar schema de validação com Zod.
 4. Exibir erros por campo.
 5. Simular estado de sucesso sem persistencia real.
 
 Resultado esperado:
 
-- Formulario validado no front-end.
-- Dados ainda nao persistidos em banco.
+- Formulário validado no front-end.
+- Dados ainda não persistidos em banco.
 
 ### Fase 4 - Banco de dados, Prisma e API real
 
@@ -104,21 +104,21 @@ Executar:
 2. Configurar Prisma.
 3. Criar migrations.
 4. Criar API real.
-5. Persistir servicos, barbeiros e agendamentos.
+5. Persistir serviços, barbeiros e agendamentos.
 
 Resultado esperado:
 
-- Persistencia real.
+- Persistência real.
 - Primeira camada de API conectada ao banco.
 
 ### Fase 5 - Regras de disponibilidade
 
 Executar:
 
-1. Definir horarios de funcionamento.
-2. Definir duracao dos servicos.
+1. Definir horários de funcionamento.
+2. Definir duração dos serviços.
 3. Definir disponibilidade por barbeiro.
-4. Bloquear horarios indisponiveis.
+4. Bloquear horários indisponíveis.
 5. Evitar conflito de agendamentos.
 
 Resultado esperado:
@@ -130,23 +130,23 @@ Resultado esperado:
 Executar:
 
 1. Criar fluxo administrativo funcional.
-2. Gerenciar servicos.
+2. Gerenciar serviços.
 3. Gerenciar barbeiros.
 4. Visualizar agendamentos.
 5. Atualizar status de agendamentos.
 
 Resultado esperado:
 
-- Painel administrativo utilizavel.
+- Painel administrativo utilizável.
 
-### Fase 7 - Integracoes futuras
+### Fase 7 - Integrações futuras
 
 Executar conforme prioridade:
 
 1. WhatsApp.
 2. E-mail transacional.
 3. Pagamentos.
-4. Calendario externo.
+4. Calendário externo.
 5. Analytics.
 6. CRM.
 
@@ -154,8 +154,8 @@ Resultado esperado:
 
 - BarberFlow integrado a ferramentas externas relevantes.
 
-## Regra de protecao da Fase 1
+## Regra de proteção da Fase 1
 
-Durante a Fase 1, qualquer solicitacao para Prisma, banco de dados,
-persistencia real ou regras reais de disponibilidade deve ser movida para fases
+Durante a Fase 1, qualquer solicitação para Prisma, banco de dados,
+persistência real ou regras reais de disponibilidade deve ser movida para fases
 futuras, salvo se o escopo do projeto for explicitamente alterado.

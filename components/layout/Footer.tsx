@@ -13,16 +13,16 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="font-bold text-white">Links rapidos</p>
+          <p className="font-bold text-white">Links rápidos</p>
           <div className="mt-4 grid gap-2 text-sm text-barber-muted">
-            <a href="#servicos">Servicos</a>
+            <a href="#servicos">Serviços</a>
             <a href="#galeria">Galeria</a>
             <a href="#barbeiros">Barbeiros</a>
-            <a href="#avaliacoes">Avaliacoes</a>
+            <a href="#avaliacoes">Avaliações</a>
           </div>
         </div>
         <div>
-          <p className="font-bold text-white">Informacoes de contato</p>
+          <p className="font-bold text-white">Informações de contato</p>
           <p className="mt-4 text-sm leading-6 text-barber-muted">
             Rua Jd Social Av, 120
             <br />
@@ -30,7 +30,7 @@ export function Footer() {
             <br />
             (11) 99999-0000
             <br />
-            Aberto ate as 20h
+            Aberto até as 20h
           </p>
         </div>
       </div>

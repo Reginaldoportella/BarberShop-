@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const navItems = [
-  { label: "SERVICOS", href: "#servicos" },
+  { label: "SERVIÇOS", href: "#servicos" },
   { label: "GALERIA", href: "#galeria" },
   { label: "EQUIPE", href: "#barbeiros" },
-  { label: "AVALIACOES", href: "#avaliacoes" },
+  { label: "AVALIAÇÕES", href: "#avaliacoes" },
 ];
 
 export function Header() {

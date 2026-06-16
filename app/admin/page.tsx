@@ -2,8 +2,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 
 const adminCards = [
-  { label: "Agendamentos", value: "0", helper: "Modulo futuro" },
-  { label: "Servicos", value: "4", helper: "Mock local" },
+  { label: "Agendamentos", value: "0", helper: "Módulo futuro" },
+  { label: "Serviços", value: "4", helper: "Mock local" },
   { label: "Barbeiros", value: "3", helper: "Mock local" },
 ];
 
@@ -20,8 +20,8 @@ export default function AdminPage() {
             Painel inicial do BarberFlow.
           </h1>
           <p className="mt-5 text-lg leading-8 text-barber-muted">
-            Estrutura visual pronta para evoluir para autenticacao, agenda,
-            cadastro de servicos e gestao da equipe.
+            Estrutura visual pronta para evoluir para autenticação, agenda,
+            cadastro de serviços e gestão da equipe.
           </p>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-3">

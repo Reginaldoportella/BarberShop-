@@ -11,8 +11,8 @@ export function Barbers() {
           </h2>
           <div className="mx-auto mt-5 h-1 w-20 bg-barber-gold" />
           <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-neutral-600">
-            Conheca os artesaos por tras da arte. Cada mestre traz anos de
-            experiencia, precisao e paixao por cada servico.
+            Conheça os artesãos por trás da arte. Cada mestre traz anos de
+            experiência, precisão e paixão por cada serviço.
           </p>
         </div>
 

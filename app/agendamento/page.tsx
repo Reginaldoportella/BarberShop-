@@ -12,7 +12,7 @@ export default function SchedulingPage() {
             Agendamento
           </p>
           <h1 className="mt-4 text-4xl font-semibold text-barber-cream sm:text-6xl">
-            Escolha o servico para iniciar sua reserva.
+            Escolha o serviço para iniciar sua reserva.
           </h1>
           <p className="mt-5 text-lg leading-8 text-barber-muted">
             Fase 1: rota preparada com dados mockados. Banco, Prisma e regras de

@@ -4,21 +4,21 @@ export function Contact() {
       <div className="section-shell">
         <div className="mx-auto max-w-4xl border border-neutral-200 bg-white p-6 text-center shadow-2xl shadow-black/10 sm:p-10">
           <p className="font-mono text-xs font-semibold uppercase tracking-[0.28em] text-barber-gold">
-            Reserve ja
+            Reserve já
           </p>
           <h2 className="mt-4 text-4xl font-black uppercase tracking-[0.08em] sm:text-5xl">
             Pronto para abrir a agenda
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-neutral-600">
-            Entraremos em contato em ate 24 horas para confirmar seu
-            agendamento. A estrutura esta pronta para receber disponibilidade,
-            barbeiros e pagamentos nas proximas fases.
+            Entraremos em contato em até 24 horas para confirmar seu
+            agendamento. A estrutura está pronta para receber disponibilidade,
+            barbeiros e pagamentos nas próximas fases.
           </p>
         </div>
 
         <div className="mx-auto mt-14 grid max-w-4xl gap-8 text-center md:grid-cols-3">
           {[
-            ["Localizacao", "Rua Premium, 120", "Centro"],
+            ["Localização", "Rua Premium, 120", "Centro"],
             ["Telefone", "(11) 99999-0000", "WhatsApp"],
             ["Horas", "Seg-Sab: 9h-20h", "Dom: 10h-16h"],
           ].map(([title, lineOne, lineTwo]) => (

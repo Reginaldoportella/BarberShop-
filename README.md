@@ -1,12 +1,12 @@
 # BarberFlow
 
-Landing page premium para barbearia/salao, criada com Next.js App Router,
+Landing page premium para barbearia/salão, criada com Next.js App Router,
 TypeScript e Tailwind CSS.
 
 ## Status do projeto
 
-- Fase 1 concluida: landing page, rotas preparadas e dados mockados.
-- Fase 2 em andamento: refinamento visual, parallax, animacoes leves e galeria.
+- Fase 1 concluída: landing page, rotas preparadas e dados mockados.
+- Fase 2 em andamento: refinamento visual, parallax, animações leves e galeria.
 - Banco de dados, Prisma, API real e regras de disponibilidade ficam para fases futuras.
 
 Mensagem oficial da rota de agendamento:
@@ -44,13 +44,13 @@ npm run build
 ## Estrutura principal
 
 - `app/`: rotas App Router.
-- `components/`: componentes de layout, secoes e motion.
+- `components/`: componentes de layout, seções e motion.
 - `data/`: dados mockados.
 - `docs/`: especificacao e fluxo de execucao.
 - `public/`: imagens e videos usados na interface.
 
 ## Escopo atual
 
-O projeto usa dados mockados e nao possui persistencia real. Prisma, banco de
+O projeto usa dados mockados e não possui persistência real. Prisma, banco de
 dados, API real, disponibilidade e painel administrativo funcional entram nas
 proximas fases.
