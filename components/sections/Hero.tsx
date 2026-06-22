@@ -31,20 +31,43 @@ export function Hero() {
 
     const videoElement = videoRef.current;
     const markVideoReady = () => setIsVideoReady(true);
+    const requestAutoplay = () => {
+      if (!videoElement) {
+        return;
+      }
+
+      videoElement.muted = true;
+      videoElement.defaultMuted = true;
+      videoElement.playsInline = true;
+      videoElement.controls = false;
+      videoElement.setAttribute("muted", "");
+      videoElement.setAttribute("playsinline", "");
+      videoElement.setAttribute("webkit-playsinline", "");
+
+      const playPromise = videoElement.play();
+
+      if (playPromise) {
+        playPromise.catch(() => {
+          setIsVideoReady(false);
+        });
+      }
+    };
 
     if (videoElement?.readyState && videoElement.readyState >= 2) {
-      markVideoReady();
+      requestAutoplay();
     }
 
-    videoElement?.addEventListener("loadeddata", markVideoReady);
-    videoElement?.addEventListener("canplay", markVideoReady);
+    videoElement?.addEventListener("loadeddata", requestAutoplay);
+    videoElement?.addEventListener("canplay", requestAutoplay);
+    videoElement?.addEventListener("playing", markVideoReady);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
 
     return () => {
       window.cancelAnimationFrame(frame);
-      videoElement?.removeEventListener("loadeddata", markVideoReady);
-      videoElement?.removeEventListener("canplay", markVideoReady);
+      videoElement?.removeEventListener("loadeddata", requestAutoplay);
+      videoElement?.removeEventListener("canplay", requestAutoplay);
+      videoElement?.removeEventListener("playing", markVideoReady);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
@@ -68,8 +91,6 @@ export function Hero() {
         playsInline
         preload="auto"
         aria-hidden="true"
-        onCanPlay={() => setIsVideoReady(true)}
-        onLoadedData={() => setIsVideoReady(true)}
       >
         <source src="/videos/hero-motion.mp4" type="video/mp4" />
       </video>
