@@ -45,12 +45,12 @@ const galleryItems = [
 
 export function Gallery() {
   return (
-    <section id="galeria" className="bg-[#061111] py-20 sm:py-28">
+    <section id="galeria" className="bg-barber-black py-20 sm:py-28">
       <div className="section-shell">
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="luxury-label">Galeria</p>
-            <h2 className="mt-4 text-4xl font-black uppercase tracking-[0.08em] text-white sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-black uppercase tracking-[0.08em] text-barber-cream sm:text-5xl">
               A assinatura visual
             </h2>
           </div>
@@ -65,7 +65,7 @@ export function Gallery() {
           {galleryItems.map((item) => (
             <article
               key={item.title}
-              className={`premium-card-motion group relative min-h-[340px] overflow-hidden bg-black sm:min-h-[420px] ${item.span}`}
+              className={`premium-card-motion group relative min-h-[340px] overflow-hidden bg-barber-graphite sm:min-h-[420px] ${item.span}`}
             >
               <Image
                 src={item.image}
@@ -76,7 +76,7 @@ export function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/12 to-black/10" />
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <h3 className="text-xl font-semibold text-white sm:text-2xl">
+                <h3 className="text-xl font-semibold text-barber-cream sm:text-2xl">
                   {item.title}
                 </h3>
               </div>

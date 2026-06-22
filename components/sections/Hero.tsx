@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from "react";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [parallaxY, setParallaxY] = useState(0);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   useEffect(() => {
     let frame = 0;
@@ -26,11 +28,23 @@ export function Hero() {
     };
 
     updateParallax();
+
+    const videoElement = videoRef.current;
+    const markVideoReady = () => setIsVideoReady(true);
+
+    if (videoElement?.readyState && videoElement.readyState >= 2) {
+      markVideoReady();
+    }
+
+    videoElement?.addEventListener("loadeddata", markVideoReady);
+    videoElement?.addEventListener("canplay", markVideoReady);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
 
     return () => {
       window.cancelAnimationFrame(frame);
+      videoElement?.removeEventListener("loadeddata", markVideoReady);
+      videoElement?.removeEventListener("canplay", markVideoReady);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
@@ -41,15 +55,21 @@ export function Hero() {
       ref={sectionRef}
       className="relative min-h-[calc(100vh-4rem)] overflow-hidden bg-black"
     >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(215,166,74,0.16),rgba(0,0,0,0.72)_56%,#000_100%)]" />
       <video
-        className="absolute inset-x-0 -top-16 h-[calc(100%+8rem)] w-full scale-110 object-cover object-center brightness-[0.72] contrast-110 saturate-125 sepia-[0.12]"
+        ref={videoRef}
+        className={`pointer-events-none absolute inset-x-0 -top-16 h-[calc(100%+8rem)] w-full scale-110 object-cover object-center brightness-[0.72] contrast-110 saturate-125 sepia-[0.12] transition-opacity duration-700 ${
+          isVideoReady ? "opacity-100" : "opacity-0"
+        }`}
         style={{ transform: `translate3d(0, ${parallaxY}px, 0) scale(1.1)` }}
         autoPlay
         muted
         loop
         playsInline
-        poster="/images/hero-tools-minimal.jpg"
-        aria-label="Cena de barbearia em movimento como fundo premium"
+        preload="auto"
+        aria-hidden="true"
+        onCanPlay={() => setIsVideoReady(true)}
+        onLoadedData={() => setIsVideoReady(true)}
       >
         <source src="/videos/hero-motion.mp4" type="video/mp4" />
       </video>
@@ -60,7 +80,7 @@ export function Hero() {
 
       <div className="section-shell relative flex min-h-[calc(100vh-4rem)] items-center justify-center py-20 text-center">
         <div className="max-w-5xl">
-          <h1 className="text-[2.35rem] font-black uppercase leading-[0.92] tracking-[0.12em] text-barber-gold sm:text-7xl sm:tracking-[0.22em] lg:text-8xl">
+          <h1 className="text-[2.35rem] font-black uppercase leading-[0.92] tracking-[0.12em] text-[#d7a64a] sm:text-7xl sm:tracking-[0.22em] lg:text-8xl">
             BarberFlow
           </h1>
           <p className="mt-5 font-serif text-3xl uppercase tracking-[0.18em] text-white sm:text-6xl sm:tracking-[0.26em] lg:text-7xl">
@@ -73,7 +93,7 @@ export function Hero() {
           <div className="mt-10">
             <Link
               href="/agendamento"
-              className="inline-flex rounded-full border border-barber-gold/80 px-8 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-barber-gold transition hover:bg-barber-gold hover:text-black"
+              className="inline-flex rounded-full border border-[#d7a64a]/80 px-8 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-[#d7a64a] transition hover:bg-[#d7a64a] hover:text-[#080706]"
             >
               Agendar consulta
             </Link>

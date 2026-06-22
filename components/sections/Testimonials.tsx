@@ -2,7 +2,7 @@ import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
   return (
-    <section id="avaliacoes" className="bg-white py-20 text-black sm:py-28">
+    <section id="avaliacoes" className="bg-barber-light py-20 text-barber-darkText sm:py-28">
       <div className="section-shell">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
@@ -17,15 +17,15 @@ export function Testimonials() {
             {testimonials.map((testimonial) => (
               <article
                 key={testimonial.name}
-                className="premium-card-motion border border-neutral-200 p-6 hover:border-barber-gold/50"
+                className="premium-card-motion border border-barber-subtle/20 bg-barber-card p-6 hover:border-barber-gold/50"
               >
                 <div className="text-barber-gold">
                   {"★".repeat(testimonial.rating)}
                 </div>
-                <p className="mt-5 text-sm leading-6 text-neutral-600">
+                <p className="mt-5 text-sm leading-6 text-barber-subtle">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <p className="mt-6 font-semibold text-black">
+                <p className="mt-6 font-semibold text-barber-darkText">
                   {testimonial.name}
                 </p>
               </article>

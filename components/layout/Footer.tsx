@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-black">
+    <footer className="bg-barber-black">
       <div className="section-shell grid gap-12 py-16 md:grid-cols-[1.3fr_0.8fr_0.9fr]">
         <div>
           <p className="font-serif text-3xl font-semibold uppercase tracking-[0.34em] text-barber-gold">
@@ -13,7 +13,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="font-bold text-white">Links rápidos</p>
+          <p className="font-bold text-barber-cream">Links rápidos</p>
           <div className="mt-4 grid gap-2 text-sm text-barber-muted">
             <a href="#servicos">Serviços</a>
             <a href="#galeria">Galeria</a>
@@ -22,7 +22,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="font-bold text-white">Informações de contato</p>
+          <p className="font-bold text-barber-cream">Informações de contato</p>
           <p className="mt-4 text-sm leading-6 text-barber-muted">
             Rua Jd Social Av, 120
             <br />

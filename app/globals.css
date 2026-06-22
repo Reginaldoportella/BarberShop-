@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: dark;
-  background: #080706;
+  background: #080808;
 }
 
 * {
@@ -17,8 +17,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: #060606;
-  color: #f7efe2;
+  background: #080808;
+  color: #f8f5ee;
 }
 
 a {
@@ -27,8 +27,8 @@ a {
 }
 
 ::selection {
-  background: #d7a64a;
-  color: #080706;
+  background: #c89b3c;
+  color: #080808;
 }
 
 @media (prefers-reduced-motion: reduce) {

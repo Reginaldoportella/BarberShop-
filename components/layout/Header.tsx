@@ -9,7 +9,7 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-black/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-barber-ash bg-barber-black/95 backdrop-blur-md">
       <div className="section-shell flex h-16 items-center justify-between gap-5">
         <Link href="/" className="flex items-center gap-3" aria-label="BarberFlow">
           <span className="font-serif text-base font-semibold uppercase tracking-[0.22em] text-barber-gold sm:text-xl sm:tracking-[0.34em]">
@@ -27,7 +27,7 @@ export function Header() {
 
         <Link
           href="/agendamento"
-          className="whitespace-nowrap rounded-full border border-barber-gold px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-barber-gold transition hover:bg-barber-gold hover:text-black sm:text-[11px] sm:tracking-[0.28em]"
+          className="whitespace-nowrap rounded-full border border-barber-gold px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-barber-gold transition hover:border-barber-goldSoft hover:bg-barber-goldSoft hover:text-barber-black sm:text-[11px] sm:tracking-[0.28em]"
         >
           Reserve
         </Link>

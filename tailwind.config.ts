@@ -10,17 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         barber: {
-          black: "#080706",
-          graphite: "#171513",
-          ash: "#24211e",
-          gold: "#d7a64a",
-          goldSoft: "#f1d18a",
-          cream: "#f7efe2",
-          muted: "#b8afa1",
+          black: "#080808",
+          graphite: "#121212",
+          ash: "#1A1A1A",
+          gold: "#C89B3C",
+          goldSoft: "#D9AE55",
+          goldDark: "#8F6A23",
+          cream: "#F8F5EE",
+          muted: "#B9B5AC",
+          subtle: "#77736C",
+          light: "#F3F0E8",
+          card: "#FAF8F3",
+          darkText: "#171717",
         },
       },
       boxShadow: {
-        gold: "0 24px 80px rgba(215, 166, 74, 0.14)",
+        gold: "0 24px 80px rgba(200, 155, 60, 0.14)",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
