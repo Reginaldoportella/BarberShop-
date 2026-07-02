@@ -4,7 +4,7 @@ const navItems = [
   { label: "SERVIÇOS", href: "#servicos" },
   { label: "GALERIA", href: "#galeria" },
   { label: "EQUIPE", href: "#barbeiros" },
-  { label: "AVALIAÇÕES", href: "#avaliacoes" },
+  { label: "CLUBE", href: "/planos" },
 ];
 
 export function Header() {
@@ -19,9 +19,9 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 text-xs font-medium tracking-[0.28em] text-barber-cream/90 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="transition hover:text-barber-gold">
+            <Link key={item.href} href={item.href} className="transition hover:text-barber-gold">
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
