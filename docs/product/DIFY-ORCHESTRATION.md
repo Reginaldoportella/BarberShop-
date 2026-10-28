@@ -221,3 +221,9 @@ Criar `CampaignRun`, `CampaignDecision`, `MessageDelivery` e `CampaignEvent` (ou
 - [WhatsApp Business — Política oficial de mensagens e templates](https://whatsappbusiness.com/policy/)
 
 > **Síntese da arquitetura:** **Dify conversa, prioriza e propõe**; **BarberFlow valida, autoriza, registra e confirma**; **WhatsApp oficial transporta mensagens permitidas**; **n8n continua opcional**.
+
+## 11. Extensão: ofertas comerciais de reconquista
+
+Além de escolher o momento da abordagem, o Workflow Dify pode **sugerir uma oferta previamente aprovada**, por exemplo benefício em corte, combo corte + barba ou serviço + produto. Para isso, consultar a API de ofertas elegíveis antes de chamar o nó LLM, e exigir saída estruturada com `offerId` e `templateId`. A API deve revalidar preço, margem, estoque, orçamento, consentimento e condições antes de emitir cupom ou enviar mensagem. Desconto nunca é criado pela IA.
+
+Fluxo, regras e backlog específicos: [RECONQUISTA-OFERTAS.md](./RECONQUISTA-OFERTAS.md).
