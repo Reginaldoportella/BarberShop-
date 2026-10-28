@@ -17,6 +17,7 @@ O BarberFlow evoluirá de uma landing page com agendamento demonstrativo para um
 5. [Backlog](./BACKLOG.md) — tarefas priorizadas, dependências e definição de pronto.
 6. [ADR-001](./ADR-001.md) — decisões e trade-offs técnicos.
 7. [Orquestração Dify e reativação inteligente](./DIFY-ORCHESTRATION.md) — agentes, fluxos de dados, critérios de seleção, ferramentas HTTP, envio autorizado e backlog complementar.
+8. [Reconquista de clientes com ofertas inteligentes](./RECONQUISTA-OFERTAS.md) — descontos, combos com produtos, regras comerciais, orquestração Dify e critérios de teste.
 
 ## Legenda de status
 
