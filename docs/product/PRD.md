@@ -39,7 +39,8 @@ Barbearias pequenas recebem agendamentos por mensagens, lidam com confirmações
 **P1 — Diferencial com IA e retenção**
 - Chat no site com linguagem natural para consultar preços, serviços e vagas.
 - IA pode chamar ferramentas de leitura e solicitar criação de reserva **somente após confirmação explícita do cliente**.
-- Automação de reativação por inatividade via n8n, com consentimento, limites de frequência e opção de parar.
+- Automação de reativação por inatividade via Dify Workflow (n8n opcional), com consentimento, limites de frequência e opção de parar.
+- **Reconquista com ofertas aprovadas:** Dify recomenda desconto moderado, combo de serviço ou convite sem desconto, mas a API valida margem, orçamento, vigência e condições; produtos físicos só se houver estoque confiável.
 - Painel com reservas assistidas, clientes reativados, valor de serviços agendados por campanhas e falhas.
 
 **Fase seguinte (P2)**
@@ -48,7 +49,7 @@ Barbearias pequenas recebem agendamentos por mensagens, lidam com confirmações
 - Ajuste de mensagens mediante feedback de clientes e barbearias.
 
 **Fora do MVP**
-- ERP/estoque, folha/financeiro completo, marketplace, pagamento automático e assinaturas de serviços para consumidores.
+- ERP/estoque completo, folha/financeiro completo, marketplace, pagamento automático e assinaturas de serviços para consumidores. Um **catálogo mínimo de produtos com disponibilidade confiável** pode ser usado no experimento de combos, sem construir um ERP.
 - SaaS com cobrança automática e múltiplos tenants em operação; **modelos preparam isolamento desde o começo**, mas só uma barbearia será atendida no piloto.
 - Voz/áudio como requisito obrigatório; possível evolução quando a integração estiver segura.
 
@@ -90,3 +91,11 @@ O MVP estará pronto para um piloto quando um cliente conseguir reservar um slot
 ## 9. Questões ainda abertas (não bloqueiam a documentação)
 
 Nome comercial final, regras de cancelamento/no-show, período de inatividade (ex.: 30 dias como configuração), provedor de IA, provedor oficial WhatsApp, hosting, suporte e limites por plano.
+
+## 10. Critérios adicionais — ofertas e reconquista
+
+- O proprietário cadastra e aprova campanhas/ofertas, com teto de desconto, margem mínima, validade e limites de contatos.
+- O Dify só escolhe entre ofertas válidas apresentadas pela API; nenhuma oferta ou preço é criado livremente pela LLM.
+- Benefícios em produtos dependem de catálogo e estoque verificáveis; o WhatsApp promocional requer autorização do contato e template de marketing aprovado.
+- Agendamentos, cupons e resgates devem ter validações de concorrência e idempotência; distinguir reservas, presença e receita efetivamente recebida.
+- **Especificação detalhada:** [Reconquista de clientes com ofertas inteligentes](./RECONQUISTA-OFERTAS.md).
