@@ -102,3 +102,9 @@ Recebe `serviceId`, `barberId` opcional, `date` da barbearia. Retorna `[{barberI
 Lint, build, testes unitários/integrados/concorrrência/E2E passando no CI; migrações versionadas e backup testado; configuração de segredos; proteção de dados e logs; termos e política de privacidade; revisão manual do fluxo com barbearia piloto.
 
 **Nota:** os endpoints, exemplos e requisitos acima são **propostas** para implementação futura; não foram encontrados na árvore atual.
+
+## 6. Extensão opcional — ofertas aprovadas para reconquista
+
+Sem modificar a regra de agenda, adicionar entidades `Offer`, `Campaign`, `Coupon` e `CouponRedemption` após consolidar o MVP. A API deve validar de maneira atômica: campanha ativa, tenant, elegibilidade do destinatário, estoque quando houver produtos, preço mínimo, margem configurada, limite por cliente, validade, não acumulação e idempotência. A IA recebe apenas ofertas autorizadas e responde com IDs; preço final e autorização são exclusivos do backend. Não contar cupom emitido como compra realizada.
+
+Contratos e fluxos detalhados: [RECONQUISTA-OFERTAS.md](./RECONQUISTA-OFERTAS.md).
