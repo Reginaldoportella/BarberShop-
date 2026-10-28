@@ -24,7 +24,7 @@ Não iniciar automação de marketing antes de cadastro, consentimento, rastreio
 | BF-012 | Chat web com agendamento via confirmação explícita | P1 | 5 | 011 | Cliente reserva sem horários inventados |
 | BF-013 | Consentimento para campanhas, revogação e preferências | P1 | 5 | 002,008 | Opt-in e opt-out auditáveis |
 | BF-014 | Elegibilidade de cliente inativo e limites de frequência | P1 | 5 | 013 | Sem futuro agendamento/opt-out não entra |
-| BF-015 | n8n workflow de reativação, dedupe e webhooks de status | P1 | 8 | 014 | Retry seguro e status rastreável |
+| BF-015 | Dify Workflow de reativação (n8n opcional), dedupe e webhooks de status | P1 | 8 | 014 | Retry seguro e status rastreável |
 | BF-016 | Dashboard de IA/campanhas e valor potencial | P1 | 5 | 012,015 | Métricas distinguem reservas de faturamento |
 | BF-017 | Integração oficial WhatsApp inbound + templates outbound | P2 | 8 | 011,013,015 | Webhook verificado, envio permitido |
 | BF-018 | Lista de espera para cancelamento e oferta com expiração | P2 | 8 | 005,017 | Oferta nunca cria reserva duplicada |
@@ -52,3 +52,19 @@ Uma história está concluída somente se: código em branch revisável, testes 
 - **Custo:** IA, mensagens, n8n e hospedagem exigem medição antes de definir preço SaaS.
 - **Compliance:** campanha nunca envia sem base legal e preferências válidas; template WhatsApp deve estar aprovado quando exigido.
 - **Produto:** testar operação na barbearia piloto antes de automatizar campanhas em escala.
+
+## Complemento — reconquista comercial com benefícios
+
+Os itens abaixo detalham ofertas opcionais. **Não bloquear a agenda real** aguardando esse conjunto; desenvolver após elegibilidade, consentimento e chat básico.
+
+| ID | Entrega | Prioridade | Dependência | Aceite |
+|---|---|---|---|---|
+| OFR-01 | Cadastro de ofertas e aprovação do gestor | P1 | BF-002, BF-007 | Desconto só dentro dos limites da loja |
+| OFR-02 | API lista ofertas válidas para candidato elegível | P1 | BF-013, BF-014, OFR-01 | Não expõe ofertas vencidas ou sem permissão |
+| OFR-03 | Workflow Dify recomenda entre ofertas existentes (dry run) | P1 | OFR-02 | Resultado estruturado, sem envio real |
+| OFR-04 | Emissão e resgate idempotente de cupom com margens e cotas | P1 | OFR-01, BF-005 | Resgate atômico, preço final auditável |
+| OFR-05 | Catálogo mínimo de produtos e verificação de estoque | P2 opcional | OFR-01 | Não oferecer item indisponível |
+| OFR-06 | Template promocional e envio WhatsApp oficial | P2 | BF-017, OFR-03, OFR-04 | Consentimento e template válido |
+| OFR-07 | Resgate de oferta no atendimento e painel de resultados | P2 | OFR-04, BF-016 | Comparecimento, descontos e margem separados |
+
+Detalhamento: [RECONQUISTA-OFERTAS.md](./RECONQUISTA-OFERTAS.md).
